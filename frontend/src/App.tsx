@@ -86,7 +86,7 @@ export default function App() {
 
   useEffect(() => {
     refreshHealth();
-    const interval = setInterval(refreshHealth, 15_000);
+    const interval = setInterval(refreshHealth, 5_000);
     return () => clearInterval(interval);
   }, []);
 
@@ -280,6 +280,15 @@ export default function App() {
         (auto-downloads on first run).
       </p>
 
+      <div className="model-loading-banner">
+        {modelLoading || (loading && !health?.model_loaded_in_memory) ? (
+          <p>
+            <span className="status-dot loading" />
+            Model loading — first card may take a minute…
+          </p>
+        ) : null}
+      </div>
+
       <div className="llm-status">
         {healthLoading ? (
           <p className="key-hint">Checking backend…</p>
@@ -346,7 +355,9 @@ export default function App() {
         onClick={handleGenerate}
       >
         {loading
-          ? "Generating… (first run can take several minutes)"
+          ? "Generating…"
+          : !llmReady || modelLoading
+          ? "Model loading…"
           : "Generate example sentence"}
       </button>
 

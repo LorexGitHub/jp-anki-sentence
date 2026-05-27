@@ -304,6 +304,20 @@ button:not(:disabled):active {
   background: #c9a227;
 }
 
+.model-loading-banner {
+  margin-bottom: 0.75rem;
+}
+
+.model-loading-banner p {
+  background: rgba(74, 139, 194, 0.12);
+  border: 1px solid rgba(74, 139, 194, 0.35);
+  border-radius: var(--radius);
+  padding: 0.65rem 0.85rem;
+  font-size: 0.85rem;
+  margin: 0;
+  color: var(--text);
+}
+
 .llm-status {
   margin-bottom: 1.25rem;
 }
