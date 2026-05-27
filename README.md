@@ -10,19 +10,20 @@ Generate Japanese example sentences for Anki (Lapis note type). Upload an `.apkg
 ## Setup
 
 ```powershell
-cd backend && python -m venv .venv && .\.venv\Scripts\Activate.ps1 && pip install -r requirements.txt
-cd frontend && npm install
+# Terminal 1 - backend
+cd backend
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+
+# Terminal 2 - frontend
+cd frontend
+npm install
+npm run dev
 ```
 
-## Run
-
-```powershell
-# Terminal 1
-cd backend && uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
-
-# Terminal 2
-cd frontend && npm run dev
-```
+Open http://localhost:5173
 
 Open http://localhost:5173
 
