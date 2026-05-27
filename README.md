@@ -29,6 +29,7 @@ cd frontend; npm install
 ```
 
 ## `.env`
+Get Anki Connect then inside Anki create clean Deck with Name 日本語の文
 
 ```
 LLM_PROVIDER=huggingface
