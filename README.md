@@ -2,6 +2,9 @@
 
 Generate Japanese example sentences for Anki (Lapis note type). Upload `.apkg`, batch-process all words with sentence + reading + translation + audio, download updated `.apkg`.
 
+Lapis note type:
+https://github.com/donkuri/lapis
+
 Input Deck Setup based on this Setup:
 https://youtu.be/_wP0AYja96U?list=LL&t=640
 
